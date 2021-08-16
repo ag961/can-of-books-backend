@@ -1,20 +1,29 @@
 {
-  "name": "auth0TestBack",
+  "name": "auth0testback",
   "version": "1.0.0",
-  "description": "",
+  "description": "**Author**: Ayrat Gimranov, Jamison McGrath (Brutal) **Version**: 1.0.0",
   "main": "server.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
     "start": "node server.js"
   },
   "keywords": [],
-  "author": "",
+  "author": "Ayrat Gimranov",
   "license": "ISC",
   "dependencies": {
+    "axios": "^0.21.1",
     "cors": "^2.8.5",
-    "dotenv": "^8.2.0",
+    "dotenv": "^8.6.0",
     "express": "^4.17.1",
     "jsonwebtoken": "^8.5.1",
-    "jwks-rsa": "^2.0.3"
-  }
+    "jwks-rsa": "^2.0.4"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/ag961/can-of-books-backend.git"
+  },
+  "bugs": {
+    "url": "https://github.com/ag961/can-of-books-backend/issues"
+  },
+  "homepage": "https://github.com/ag961/can-of-books-backend#readme"
 }
