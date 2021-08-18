@@ -1,11 +1,11 @@
 # Can of Books App (back-end)
 
 **Author**: Ayrat Gimranov, Jamison McGrath (Brutal)
-**Version**: 1.0.1 
+**Version**: 1.0.3
 
 ## Overview
 <!-- Provide a high level overview of what this application is and why you are building it, beyond the fact that it's an assignment for this class. (i.e. What's your problem domain?) -->
-In this module, we buitl a web app to track what books have impacted us, and what's recommended to read next.
+In this module, we added Mongo DataBase so that a user can retrieve books stored in it.
 
 ## Getting Started
 <!-- What are the steps that a user must take in order to build this app on their own machine and get it running? -->
@@ -13,12 +13,13 @@ In this module, we buitl a web app to track what books have impacted us, and wha
 - hook the front-end up to Auth0 using Auth0 docs
 - hopp the back-end up to Auth0 to verify tokens received from front-end
 - wire up front and back-end to complete the cycle;
+- connect to Mongo database
 
 ## Architecture
 <!-- Provide a detailed description of the application design. What technologies (languages, libraries, etc) you're using, and any other relevant design information. -->
 ![WRRC](./img/Lab11WRRC.png)
 
-This app uses HTML, CSS, JS, React, React-Bootstrap, Node.js (express), OAuth-Auth0, Trello.  
+This app uses HTML, CSS, JS, React, React-Bootstrap, Node.js (express), MongoDB, OAuth-Auth0, Trello.  
 
 ## Change Log
 <!-- Use this area to document the iterative changes made to your application as each feature is successfully implemented. Use time stamps. Here's an example:
@@ -35,24 +36,24 @@ Clarissa Pamonicutt - helped set up basic repo
 
 ## Time Estimates
 
-Name of feature: 1. Set up your repositories
+Name of feature: 1. Storage: As a user, I'd like my books to persist, so that whenever I make changes, I can see my full list of best books.
 
 Estimate of time needed to complete: 2 hrs
 
-Start time: 4 am
+Start time: 7.30 am
 
-Finish time: 6.30 am
+Finish time: 2.20 pm
 
-Actual time needed to complete: 2.5 hrs
+Actual time needed to complete:  4 hrs
 
 ---------------------------------
 
-Name of feature: 2. Authentication: As a user, I'd like to sign in with OAuth, so that I can authenticate to the site without creating yet-another username/password combo to potentially get hacked or lost.
+Name of feature: 2. Book Component: As a user, I'd like to see my list of books, so that I can track what's impacted me, and what's recommended to me.
 
-Estimate of time needed to complete: 6 hrs
+Estimate of time needed to complete: 2 hrs
 
-Start time: 7 am
+Start time: 2.20 pm
 
-Finish time: 8 am
+Finish time:  5 pm
 
-Actual time needed to complete: 12 hrs
+Actual time needed to complete:  2 hrs 40 mins

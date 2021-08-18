@@ -6,6 +6,12 @@ const app = express();
 const cors = require('cors');
 const jwt = require('jsonwebtoken');
 const jwksClient = require('jwks-rsa');
+const mongoose = require('mongoose');
+
+const BookModel = require('./models/books.js');
+const clear = require('./modules/clearDB.js');
+const seed = require('./modules/seed.js');
+// const addNewBook = require('./modules/addNewBook.js');
 
 // this function comes directly from the jsonwebtoken docs
 const client = jwksClient({
@@ -41,4 +47,25 @@ app.get('/test', (request, response) => {
   });
 });
 
-app.listen(PORT, () => console.log(`listening on ${PORT}`));
+app.get('/books', async (req, res) => {
+  try {
+    let booksdb = await BookModel.find({});
+    res.send(booksdb);
+  }
+  catch (error) {
+    res.status(500).send('database error!');
+  }
+})
+
+mongoose.connect('mongodb://127.0.0.1:27017/books', {
+  useNewUrlParser: true,
+  useUnifiedTopology: true
+})
+  .then(() => {
+    console.log('Connected to the database');
+    seed();  
+  });  
+  
+  app.listen(PORT, () => console.log(`listening on ${PORT}`));
+
+// clear();
