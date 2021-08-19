@@ -17,7 +17,7 @@ In this module, we added Mongo DataBase so that a user can retrieve books stored
 
 ## Architecture
 <!-- Provide a detailed description of the application design. What technologies (languages, libraries, etc) you're using, and any other relevant design information. -->
-![WRRC](./img/Lab11WRRC.png)
+![WRRC](./img/Lab12_UML.png)
 
 This app uses HTML, CSS, JS, React, React-Bootstrap, Node.js (express), MongoDB, OAuth-Auth0, Trello.  
 
@@ -27,12 +27,18 @@ This app uses HTML, CSS, JS, React, React-Bootstrap, Node.js (express), MongoDB,
 01-01-2001 4:59pm - Application now has a fully-functional express server, with a GET route for the location resource. -->
 8/15/2021 - Bsaic repo set up done.
 8/16/2021 - App receives the token from auth0, sends a test request to server which verifies the token with auth0 and returns the user info to front-end.
+8/19/2021 - Server verifies user token, then reads data from MongoDB and sends to front-end for display
 
 ## Credit and Collaborations
 <!-- Give credit (and a link) to other people or resources that helped you build this application. -->
 Jamison McGrath (Brutalism) - team member,
-Heather Bisgaard - shared [UML](./img/Lab11WRRC.png), helped in starting the repos setup
+Ryan Gallaway
 Clarissa Pamonicutt - helped set up basic repo
+Heather Bisgaard helped in starting the repos setup and provided nitial UML
+JP
+Alex
+Chris
+Phil
 
 ## Time Estimates
 
@@ -50,10 +56,10 @@ Actual time needed to complete:  4 hrs
 
 Name of feature: 2. Book Component: As a user, I'd like to see my list of books, so that I can track what's impacted me, and what's recommended to me.
 
-Estimate of time needed to complete: 2 hrs
+Estimate of time needed to complete: 3 hrs
 
 Start time: 2.20 pm
 
-Finish time:  5 pm
+Finish time:  9 apm
 
-Actual time needed to complete:  2 hrs 40 mins
+Actual time needed to complete:  5 hrs 40 mins
