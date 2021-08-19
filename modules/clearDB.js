@@ -3,12 +3,12 @@
 const mongoose = require('mongoose');
 const BookModel = require('../models/books.js');
 
-async function clear(){
+const clear = async (req, res) => {
   try {
     await BookModel.deleteMany({});
-    console.log('Cleared Database');
+    res.send('Cleared Database');
   } catch (error) {
-    console.log('Clearing error');
+    res.send('Clearing error');
   }
 }
 
