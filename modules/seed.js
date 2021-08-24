@@ -25,12 +25,19 @@ let seedData = [
 ];
 
 let seed = async (req, res) => {
+  try {
 
-  let booksdb = await BookModel.find({});
-  if (booksdb.length === 0) {
-    seedData.map((book) => addNewBook(book));
-    res.send('Seeded three books');
+    let booksdb = await BookModel.find({});
+    if (booksdb.length === 0) {
+      seedData.map((book) => addNewBook(book));
+      res.send('Seeded three books');
+    } else {
+      res.send('Database is not empty. Didn\'t seed anything!');
+    };
   }
-};
+  catch (err) {
+    res.send('Database is not empty!')
+  };
+}
 
 module.exports = seed;

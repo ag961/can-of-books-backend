@@ -17,10 +17,11 @@ const seed = require('./modules/seed.js');
 const getBooks = require('./modules/getBooks');
 const createBook = require('./modules/createBook');
 const PORT = process.env.PORT || 3001;
+const deleteBook = require('./modules/deleteBook');
 
 app.use(cors());
-app.use(express.json());
 
+app.use(express.json());
 
 app.get('/', (req, res) => {
   res.send('Hello World!');
@@ -34,6 +35,8 @@ app.get('/seed', seed);
 
 app.post('/books', createBook);
 
+app.delete('/books/:id', deleteBook);
+
 mongoose.connect('mongodb://127.0.0.1:27017/books', {
   useNewUrlParser: true,
   useUnifiedTopology: true
@@ -43,5 +46,3 @@ mongoose.connect('mongodb://127.0.0.1:27017/books', {
   });
 
 app.listen(PORT, () => console.log(`listening on ${PORT}`));
-
-

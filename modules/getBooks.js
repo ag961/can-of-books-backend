@@ -12,9 +12,16 @@ const getBooks = (request, response) => {
       if (err) {
         response.status(500).send('invalid token');
       }
-      BookModel.find((err, booksdb) => {
-        response.send(booksdb);
-      });
+      let email = request.query.email;
+      if (email === user.email) {
+
+        BookModel.find({ email }, (err, booksdb) => {
+          response.send(booksdb);
+        });
+
+      } else {
+        response.send('you are not who you are');
+      }
     });
   }
   catch (error) {
