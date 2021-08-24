@@ -1,11 +1,11 @@
 # Can of Books App (back-end)
 
 **Author**: Ayrat Gimranov, Jamison McGrath (Brutal)
-**Version**: 1.0.3
+**Version**: 1.0.4
 
 ## Overview
 <!-- Provide a high level overview of what this application is and why you are building it, beyond the fact that it's an assignment for this class. (i.e. What's your problem domain?) -->
-In this module, we added Mongo DataBase so that a user can retrieve books stored in it.
+In this module, we added a functionality, so that a user can add new books, as well as delete the existing ones from the database, provided the authentication is valid.
 
 ## Getting Started
 <!-- What are the steps that a user must take in order to build this app on their own machine and get it running? -->
@@ -14,10 +14,11 @@ In this module, we added Mongo DataBase so that a user can retrieve books stored
 - hopp the back-end up to Auth0 to verify tokens received from front-end
 - wire up front and back-end to complete the cycle;
 - connect to Mongo database
+- add routes taht handle get, post and delete routes
 
 ## Architecture
 <!-- Provide a detailed description of the application design. What technologies (languages, libraries, etc) you're using, and any other relevant design information. -->
-![WRRC](./img/Lab12_UML.png)
+![WRRC](./img/Lab13_UML.png)
 
 This app uses HTML, CSS, JS, React, React-Bootstrap, Node.js (express), MongoDB, OAuth-Auth0, Trello.  
 
@@ -28,6 +29,8 @@ This app uses HTML, CSS, JS, React, React-Bootstrap, Node.js (express), MongoDB,
 8/15/2021 - Bsaic repo set up done.
 8/16/2021 - App receives the token from auth0, sends a test request to server which verifies the token with auth0 and returns the user info to front-end.
 8/19/2021 - Server verifies user token, then reads data from MongoDB and sends to front-end for display
+8/24/2021 - Added POST and DELETE requests to add or delete a book from the database with valid authentication
+
 
 ## Credit and Collaborations
 <!-- Give credit (and a link) to other people or resources that helped you build this application. -->
@@ -42,24 +45,24 @@ Phil
 
 ## Time Estimates
 
-Name of feature: 1. Storage: As a user, I'd like my books to persist, so that whenever I make changes, I can see my full list of best books.
+Name of feature: 1. Create: As a user, I'd like to add a new book to my shelf, so that I can keep my lists up to date with my latest books and recommendations.
 
-Estimate of time needed to complete: 2 hrs
+Estimate of time needed to complete: 6 hrs
 
-Start time: 7.30 am
+Start time: 10 am
 
-Finish time: 2.20 pm
+Finish time:  10 pm
 
-Actual time needed to complete:  4 hrs
+Actual time needed to complete:  10 hrs
 
 ---------------------------------
 
 Name of feature: 2. Book Component: As a user, I'd like to see my list of books, so that I can track what's impacted me, and what's recommended to me.
 
-Estimate of time needed to complete: 3 hrs
+Estimate of time needed to complete: 6 hrs
 
-Start time: 2.20 pm
+Start time: 10 am
 
-Finish time:  9 apm
+Finish time:  9 pm
 
-Actual time needed to complete:  5 hrs 40 mins
+Actual time needed to complete:  9 hrs
