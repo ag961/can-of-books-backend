@@ -18,10 +18,12 @@ const getBooks = require('./modules/getBooks');
 const createBook = require('./modules/createBook');
 const PORT = process.env.PORT || 3001;
 const deleteBook = require('./modules/deleteBook');
+const updateBook = require('./modules/updateBook');
 
 app.use(cors());
-
 app.use(express.json());
+
+//-------------------routes-------------------------------//
 
 app.get('/', (req, res) => {
   res.send('Hello World!');
@@ -36,6 +38,10 @@ app.get('/seed', seed);
 app.post('/books', createBook);
 
 app.delete('/books/:id', deleteBook);
+
+app.put('/books/:id', updateBook);
+
+//----------------------------------------------------------//
 
 mongoose.connect('mongodb://127.0.0.1:27017/books', {
   useNewUrlParser: true,

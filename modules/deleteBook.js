@@ -10,20 +10,22 @@ const deleteBook = (req, res) => {
 
   try {
     jwt.verify(token, getKey, {}, async function (err, user) {
+
       if (err) {
         res.status(500).send('invalid token');
       }
-      let myId = req.params.id;
-      console.log(myId);
-      let email = req.query.email;
-      console.log(email);
-      if (email === user.email) {
 
-        await BookModel.findByIdAndDelete(myId);
-        res.send('Successfully deleted');
-        console.log('deleted one');
-        console.log(BookModel.find({}));
-        
+      let myId = req.params.id;
+      let email = req.query.email;
+
+      if (email === user.email) {
+        try {
+          let bookDeleted = await BookModel.findByIdAndDelete(myId);
+          res.send(bookDeleted);
+        } catch (err) {
+          res.status(500).send(err)
+          console.log(err);
+        }
 
       } else {
         res.send('You are not who you say you are');
@@ -32,8 +34,6 @@ const deleteBook = (req, res) => {
   } catch (error) {
     res.status(500).send('database error!');
   }
-
-
 };
 
 module.exports = deleteBook;
