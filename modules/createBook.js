@@ -6,7 +6,7 @@ const BookModel = require('../models/books.js');
 
 const createBook = (req, res) => {
 
-  const token = req.body.headers.Authorization.split(' ')[1];
+  const token = req.body.headers.authorization.split(' ')[1];
   try {
     jwt.verify(token, getKey, {}, async function (err, user) {
       if (err) {
